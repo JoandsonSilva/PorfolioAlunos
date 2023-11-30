@@ -231,5 +231,19 @@ body {
   }
   
 
+  
+  /* Adicione estilos para telas menores, por exemplo, tablets e dispositivos móveis */
+  @media screen and (max-width: 768px) {
+    .portfolio-item {
+      max-width: calc(50% - 20px); /* ou ajuste conforme necessário para 2 itens por linha */
+    }
+  }
+  
+  /* Adicione estilos para telas ainda menores, por exemplo, smartphones */
+  @media screen and (max-width: 480px) {
+    .portfolio-item {
+      max-width: 100%; /* Um item por linha */
+    }
+  }
 
   
