@@ -159,3 +159,41 @@ function smoothScrollToItem() {
         window.scrollTo(0, run);
     }
 }
+
+
+
+function smoothScrollToItem() {
+    const filter = document.getElementById('searchInput').value.toUpperCase();
+
+    if (filter.trim() !== '') {
+        // Restante do código
+    } else {
+        // Se o filtro estiver vazio, role suavemente para o topo da página
+        const start = window.pageYOffset;
+        const end = 0;
+        const distance = end - start;
+        const duration = 650;
+
+        let startTime = null;
+
+        function scrollAnimation(currentTime) {
+            if (startTime === null) { startTime = currentTime; }
+
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, start, distance, duration);
+
+            window.scrollTo(0, run);
+
+            if (timeElapsed < duration) { requestAnimationFrame(scrollAnimation); }
+        }
+
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(scrollAnimation);
+    }
+}

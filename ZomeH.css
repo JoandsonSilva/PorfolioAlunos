@@ -1,3 +1,5 @@
+
+
 :root {--CorBase: black;}
 
 p.Idade {color: var(--CorBase);}
@@ -174,3 +176,54 @@ p,
     top: 45px;
     user-select: none;
 }
+
+
+
+body {
+    font-family: 'Lora', serif;
+    /* Adicione outros estilos desejados para o corpo */
+  }
+  
+  .header {
+    text-align: center;
+    /* Adicione outros estilos desejados para o cabeçalho */
+  }
+
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  
+  .portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* ou outro alinhamento desejado */
+  }
+  
+  .portfolio-item {
+    flex-basis: calc(33.33% - 20px); /* Ajuste conforme o número de itens por linha */
+    margin-bottom: 20px;
+  }
+
+  
+  h1, h2, h3, p {
+    font-size: 1em; /* Ajuste conforme necessário */
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    /* Adicione estilos para telas menores aqui */
+    .portfolio-item {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Adicione estilos para telas ainda menores aqui */
+    .portfolio-item {
+      flex-basis: 100%;
+    }
+  }
+  
